@@ -24,8 +24,11 @@ body{
     height: 200vh;
 }
 .intro #about{
-    position: sticky;
+    position: absolute;
     top: 100vh;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 #about{
     position: relative;
@@ -84,6 +87,10 @@ nav ul li a:hover::after{
 }
 .header-text h1 span{
     color: #ff004f;
+}
+.header-text{
+    will-change: transform, opacity;
+    transition: transform 0.2s linear, opacity 0.2s linear;
 }
 
 /*            about        */
