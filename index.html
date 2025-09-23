@@ -11,32 +11,39 @@
 <body>
 <!-- this section is the welcome page -->
     <div class="intro">
-    <div class="sticky-hero">
-        <div id = 'header'>
-            <div class = 'container'>
-               <nav>
-                   
-                   <ul id = "sidemenu">
-                       <li><a href = '#header'> Home </a></li>
-                       <li><a href = '#about'> About </a></li>
-                       <li><a href = '#services'> Services </a></li>
-                       <li><a href = '#portfolio'> Portfolio </a></li>
-                       <li><a href = '#contact'> Contact </a></li>
-                       <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                        
-                   </ul>
-                   <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-               </nav>
-                <div class = 'header-text'>
-                    <h1><span>Karrar</span> Alqallf<br>CS Student</h1>
+        <div class="sticky-hero">
+            <div id = 'header'>
+                <div class = 'container'>
+                <nav>
+                    
+                    <ul id = "sidemenu">
+                        <li><a href = '#header'> Home </a></li>
+                        <li><a href = '#about'> About </a></li>
+                        <li><a href = '#services'> Services </a></li>
+                        <li><a href = '#portfolio'> Portfolio </a></li>
+                        <li><a href = '#contact'> Contact </a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                            
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                    <div class = 'header-text'>
+                        <h1><span>Karrar</span> Alqallf<br>CS Student</h1>
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 
 
 <div id="about">
     <div class="container">
+        <div class = 'about-text'>
+            <h1>
+                <span>About me</span><br>King Fahd University of<br>Petroleumand Minerals<br>computer science student.<br>Saudi born at 2004 in Qatif. 
+            </h1>
+        </div>
+    </div>
+    <!-- <div class="container">
         <div class ="row">
             <div class="about-col-1">
                 <img src="../assets/images/user.png" alt="">
@@ -74,27 +81,11 @@
             </div>
         </div>
     </div>
-    </div>
+    </div> -->
 </div>
 
 <!-- services -->
 
-<script>
-    (function(){
-        var headerText = document.querySelector('.header-text');
-        var intro = document.querySelector('.intro');
-        if(!headerText || !intro) return;
-        function onScroll(){
-            var viewportH = window.innerHeight;
-            var scrolled = Math.min(window.scrollY || window.pageYOffset || 0, viewportH);
-            var progress = scrolled / viewportH; // 0 -> 1 during first viewport scroll
-            var translateY = -progress * viewportH; // move up to -100vh
-            headerText.style.transform = 'translateY(' + translateY + 'px)';
-        }
-        window.addEventListener('scroll', onScroll, { passive: true });
-        onScroll();
-    })();
-    </script>
 <div id="services">
     <div class="container">
         <h1 class="sub-title">My services</h1>
@@ -206,6 +197,24 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script>
+
+
+<script>
+    (function(){
+        var headerText = document.querySelector('.header-text');
+        var intro = document.querySelector('.intro');
+        if(!headerText || !intro) return;
+        function onScroll(){
+            var viewportH = window.innerHeight;
+            var scrolled = Math.min(window.scrollY || window.pageYOffset || 0, viewportH);
+            var progress = scrolled / viewportH; // 0 -> 1 during first viewport scroll
+            var translateY = -progress * viewportH; // move up to -100vh
+            headerText.style.transform = 'translateY(' + translateY + 'px)';
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    })();
+    </script>
 
 <script>
     var sm = document.getElementById("sidemenu");
